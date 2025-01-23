@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+
+	body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(https://wallpapers.com/images/hd/light-color-background-vmkuihk29pi1xq65.jpg);
+    }
+
+    header {
+        background-image: url('https://cdn.pixabay.com/photo/2020/02/24/18/05/background-4876988_640.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #DAA520;
+        padding: 160px 90px;
+    }
+
+    .text-animasi{
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        animation: typing 1.9s steps(30, end) forwards, blinking 3s infinite;
+        display: grid;
+        place-items: center;
+        width: 380px;
+        position: sticky;
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: 'Supermercado One', cursive;
+        text-shadow: 4px 4px 0px #D7DACC, 8px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        @keyframes blinking {
+          0% {border-color: transparent}
+          50% {border-color: white}
+          100% {border-color: red;}
+        }
+
+    #wrapper {
+        width: 900px;
+        margin: auto;
+        padding: 10px;
+    }  
+
+    .warr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000080;
+        padding: 15px 15px;    
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .logo img {
+        width: 50px;
+        margin-right: 18px;
+    }
+
+    .logo p {
+    font-size: 26px;
+    margin: 10px;
+    }
+
+    .run {
+        list-style-type: none;
+        display: flex;
+        gap: 28px;
+        justify-content: right;
+    }
+
+    nav ul li {
+    	margin: 0;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 20px 20px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #DAA520;
+        transform: scale(1.05);
+    }
+
+    main {
+	    padding: 80px;
+	}
+
+	.berita h1 {
+	    font-size: 3em;
+	    width: 100%;   
+	}
+
+	.berita-list {
+	    display: grid;
+	    gap: 20px;
+	    width: 80%;       
+	}
+
+	.berita-item {
+	    background-color: goldenrod;
+	    border-radius: 8px;  
+	    overflow: hidden;
+	}
+
+	.berita-item img {
+	    width: 100%;
+	    height: 310px;
+	}
+
+	.berita-info {
+	    padding: 15px;
+	}
+
+	.berita-info h2 {
+	    font-size: 1.5em;
+	    margin-bottom: 10px;
+	    color: white;
+	}
+
+	.berita-info .tanggal {
+	    font-size: 0.9em;
+	    color: steelblue;
+	    margin-bottom: 10px;
+	}
+
+	.berita-info .excerpt {
+	    font-size: 1em;
+	    color: navajowhite;
+	}
+
+	footer {
+	    color: #fff;
+	    padding: 45px 40px;
+	    font-family: Arial, sans-serif;
+	    align-content: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-about, .footer-contact, .footer-links {
+        flex: 1;
+        margin: 40px;
+        min-width: 300px;
+    }
+
+    .footer-about h3, .footer-contact h3, .footer-links h3 {
+        color: #f4f4f4;
+        margin-bottom: 15px;
+    }
+
+    .footer-about p, .footer-contact ul, .footer-links ul {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .footer-about img {
+        width: 160px;
+        height: 70px;
+        border-radius: 2px;
+    }
+
+    .footer-contact ul, .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-contact li, .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: goldenrod;
+        text-decoration: revert-layer;
+    }
+
+    .footer-links a:hover {
+        text-decoration: line-through;
+        background-color: white;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 18px;
+        color: #f4f4f4;
+        background-size: 10;
+    }
+
+    .open-chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNK-Dh6E9iIW8ZOTYo782nV--t9nBUh2jaHw&s);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            font-size: 40px;
+            cursor: pointer;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .open-chat-btn:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        .chatbox-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 420px;
+            background-color:;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chatbox-header {
+            background-color: #228B22;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .chatbox-content {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-image: url(https://img.freepik.com/premium-photo/blue-abstract-background_1256222-8390.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .chat-message {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .chat-message.user {
+            background-color: #32CD32;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-message.bot {
+            background-color: #95a5a6;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .chatbox-footer {
+            padding: 12px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .chatbox-footer input {
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+        }
+
+        .chatbox-footer button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .chatbox-footer button:hover {
+            background-color: #2980b9;
+        }
+
+	</style>
+</head>
+<body>
+	<nav class="warr">
+        <div class="logo">
+                <img src="https://sman2kdi.sch.id/wp-content/uploads/2024/03/logo-sman-2-kdi.jpeg" alt="Logo Sekolah">
+                <p> <b>SMA NEGERI 2 KENDARI</b> </p>    
+        </div>
+        <ul class="run">
+            <li><a href="home.html">Beranda</a></li>
+            <li><a href="profil.html"> Profil </a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <header>      
+        <h1  class="text-animasi" id="wrapper" style= "font-size: 50px" "font-weight: bold" align="center"> BERITA SMA NEGERI 2 KENDARI </h1>       
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+    	<h1 class="text-animasi" id="wrapper" style="color: goldenrod; background-color: navy;" align="left">Berita Terkini</h1>
+    </div>
+    <main>
+        <section class="berita">
+            <div class="berita-list">
+                <article class="berita-item">
+                    	<img src="https://sman2kdi.sch.id/wp-content/uploads/2024/03/sman-2-kdi-merdeka.png" alt="Berita 1">
+                    <div class="berita-info">
+                        <h2><a href="https://sman2kdi.sch.id/2023/10/09/sman-2-kendari-maksimalkan-penerapan-kurikulum-merdeka/">SMAN 2 Kendari Maksimalkan Penerapan Kurikulum Merdeka</a></h2>
+                        <p class="tanggal">9 Oktober 2023</p>
+                        <p class="excerpt">Kurikulum Merdeka Belajar bertujuan untuk menciptakan siswa siswi yang berkarakter, berakhlak, inovatif dan kreatif. Atas dasar itulah SMAN 2 Kendari terus berupaya untuk memaksimalkan penerapan yang disesuaikan dengan kebutuhan siswa.</p>
+                    </div>
+                </article>
+                <br>
+                <article class="berita-item">
+                    	<img src="https://sman2kdi.sch.id/wp-content/uploads/2024/05/UTBK-SMAN-2-Kendari-Provinsi-Sulawesi-Tenggara.jpg" alt="Berita 2">
+                    <div class="berita-info">
+                        <h2><a href="https://sman2kdi.sch.id/2024/05/25/penetapan-kelulusan-peserta-didik-tp-2023-2024/">Penetapan Kelulusan Peserta Didik TP. 2023/2024</a></h2>
+                        <p class="tanggal">6 Mei 2024</p>
+                        <p class="excerpt">Keputusan Kepala Sekolah SMA Negeri 2 Kendari, Nur Aida, S. Pd. Tentang Prosedur Operasional Standar (POS) Ujian sekolah Tahun Pelajaran 2023/2024 serta Hasil Analisis dan Rapat Dewan Guru tentang penegas kelulusan pada tanggal 06 Mei 2024, telah diputuskan nama-nama sebagaimana tersebut dalam lampiran Surat Keputusan Kepala SMA Negeri 2 Kendari tentang Penetapan kelulusan Peserta didik SMAN 2 Kendari adalah peserta didik SMA Negeri 2 Kendari kelas XII yang telah meneyelesaikan program pembelajaran dan mengikuti Ujian Sekolah TP.</p>
+                    </div>
+                </article>
+                <br>              
+                <article class="berita-item">
+                    	<img src="https://sman2kdi.sch.id/wp-content/uploads/2024/03/Nur-Aida-2.jpeg" alt="Berita 3">
+                    <div class="berita-info">
+                        <h2><a href="https://sman2kdi.sch.id/2023/08/01/sman-2-kendari-mulai-terapkan-ulangan-akhir-semester-sistem-digital/">SMAN 2 Kendari Mulai Terapkan Ulangan Akhir Semester Sistem Digital</a></h2>
+                        <p class="tanggal">1 Agustus 2023</p>
+                        <p class="excerpt">Kepala SMAN 2 Kendari Nur Aida menyebut, ulangan akhir semester digital baru diterapkan tahun ini, melalui aplikasi Google Form dan Examora yang dapat didownload lewat smartphone masing-masing siswa..</p>
+                    </div>
+                </article>
+                <br>
+                <article class="berita-item">
+                    	<img src="https://sman2kdi.sch.id/wp-content/uploads/2024/03/Nur-Aida.png" alt="Berita 4">
+                    <div class="berita-info">
+                        <h2><a href="https://sman2kdi.sch.id/2024/01/17/kepala-sman-2-kendari-berpartisipasi-dalam-penerapan-e-kinerja/">Kepala SMAN 2 Kendari Berpartisipasi dalam Penerapan E-Kinerja</a></h2>
+                        <p class="tanggal">17 Januari 2024</p>
+                        <p class="excerpt">Kepala SMAN 2 Kendari, Nur Aida, terus mendorong dan berpartisipasi dalam upaya memajukan kualitas pendidikan di Sultra. Bentuk dukungan salah satunya adalah mengikuti rapat koordinasi guru penggerak bersama para perwakilan dari berbagai provinsi lainnya yang diselenggarakan oleh Balai Besar Guru Penggerak Sulawesi Selatan mulai 17 hingga 19 Januari 2024.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+        <br>
+    <br>
+    <br>
+    <footer style="background-color: #808000">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <img src="https://sman2kdi.sch.id/wp-content/uploads/2024/04/sman2-kdi-3.jpg" alt="About Us">
+                <p>SMAN 2 Kendari didirikan pada 10 September, telah melahirkan ribuan alumni unggulan, menorehkan ribuan karya dan prestasi.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>✉️   Email : sman2kendari@gmail.com </li>
+                    <li>📞   Telpon: 081341546992</li>
+                    <li>📌   Alamat: JL.Sisingamangaraja, Rahandouna, Poasia, Kota Kendari, Sulawesi Tenggara (93232)</li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                </ul>
+            </div>
+        </div>    
+    </footer>
+    
+    <footer style="background-color: #696969">
+        <div class="footer-bottom">
+            <p>&copy; 2025 SMA NEGERI 2 KENDARI | Semua Hak Cipta Dilindungi</p>
+        </div>
+    </footer>
+
+    <nav>
+        <button class="open-chat-btn" onclick="openChat()"></button>
+
+        <div class="chatbox-container">
+            <div class="chatbox-header">
+                <span>Chat dengan Kami</span>
+                <span class="close-btn" onclick="closeChat()">×</span>
+            </div>
+            <div class="chatbox-content" id="chat-content">
+                <div class="chat-message bot">Halo! Ada yang bisa kami bantu?</div>
+            </div>
+            <div class="chatbox-footer">
+                <input type="text" id="user-message" placeholder="Tulis pesan..." />
+                <button onclick="sendMessage()">Kirim</button>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.querySelector('.next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        function updateSlider() {
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+    <script>
+        function openChat() {
+            document.querySelector('.chatbox-container').style.display = 'flex';
+        }
+
+        function closeChat() {
+            document.querySelector('.chatbox-container').style.display = 'none';
+        }
+
+        function sendMessage() {
+            const userMessage = document.getElementById('user-message').value.trim();
+            if (userMessage === "") return;
+            const chatContent = document.getElementById('chat-content');
+            const userMessageElement = document.createElement('div');
+            userMessageElement.classList.add('chat-message', 'user');
+            userMessageElement.textContent = userMessage;
+            chatContent.appendChild(userMessageElement);
+            chatContent.scrollTop = chatContent.scrollHeight;
+
+            document.getElementById('user-message').value = "";
+            setTimeout(() => {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('chat-message', 'bot');
+                botMessage.textContent = "Terima kasih atas pesan Anda! Kami akan segera merespon.";
+                chatContent.appendChild(botMessage);
+
+                chatContent.scrollTop = chatContent.scrollHeight;
+            }, 1500);
+        }
+    </script>
+
+</body>
+</html>
