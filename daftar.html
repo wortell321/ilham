@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://img.lovepik.com/photo/48027/7549.jpg_wh300.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-image: url(https://images.pexels.com/photos/1624438/pexels-photo-1624438.jpeg?cs=srgb&dl=pexels-eberhardgross-1624438.jpg&fm=jpg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .register-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .textbox {
+            margin-bottom: 20px;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .textbox input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .register-btn button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .register-btn button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            display: none;
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Links untuk Login */
+        .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .links a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .register-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .logo img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://sman2kdi.sch.id/wp-content/uploads/2024/03/logo-sman-2-kdi.jpeg" alt="Logo SMAN 2 Kendari">
+            </div>
+            <h2><a href="daftar.html">Daftar </a></h2>
+            <form action="#" method="post">
+                <div class="textbox">
+                    <input type="text" name="full-name" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="textbox">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" name="confirm-password" placeholder="Konfirmasi Password" required>
+                </div>
+                <div class="register-btn">
+                    <button type="submit">Daftar</button>
+                </div>
+            </form>
+            
+            <div class="error-message" id="error-message">
+                <p>Terjadi kesalahan. Periksa kembali informasi yang Anda masukkan.</p>
+            </div>
+        
+            <div class="links">
+                <a href="login.html">Sudah punya akun? Login di sini</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const password = document.querySelector("[name='password']").value;
+            const confirmPassword = document.querySelector("[name='confirm-password']").value;
+            if (password !== confirmPassword) {
+                document.getElementById("error-message").style.display = "block";
+            } else {
+                alert("Pendaftaran berhasil!");
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+</body>
+</html>
